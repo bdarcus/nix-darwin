@@ -34,7 +34,7 @@
         ];
         casks = [
           "hammerspoon"
-          "firefox"
+          # "firefox"
           "iina"
           "the-unarchiver"
         ];
@@ -72,7 +72,7 @@
         dock.autohide  = true;
         dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
-          "/Applications/Firefox.app"
+          "/Applications/Safari.app"
           # "${pkgs.obsidian}/Applications/Obsidian.app"
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
