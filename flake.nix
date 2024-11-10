@@ -1,5 +1,5 @@
 {
-  description = "Zenful Darwin Nix Configuration";
+  description = "Tweaked Zenful Darwin Nix Configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -21,7 +21,7 @@
           pkgs.alacritty
           pkgs.mkalias
           pkgs.neovim
-          pkgs.obsidian
+          # pkgs.obsidian
           pkgs.tmux
         ];
 
@@ -71,13 +71,13 @@
         dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
           "/Applications/Firefox.app"
-          "${pkgs.obsidian}/Applications/Obsidian.app"
+          # "${pkgs.obsidian}/Applications/Obsidian.app"
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
         ];
         finder.FXPreferredViewStyle = "clmv";
         loginwindow.GuestEnabled  = false;
-        NSGlobalDomain.AppleICUForce24HourTime = true;
+        # NSGlobalDomain.AppleICUForce24HourTime = true;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
         NSGlobalDomain.KeyRepeat = 2;
       };
@@ -90,8 +90,8 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       # Create /etc/zshrc that loads the nix-darwin environment.
-      programs.zsh.enable = true;  # default shell on catalina
-      # programs.fish.enable = true;
+      # programs.zsh.enable = true;  # default shell on catalina
+      programs.fish.enable = true;
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
@@ -106,8 +106,8 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."mini" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#book
+    darwinConfigurations."book" = nix-darwin.lib.darwinSystem {
       modules = [
         configuration
         nix-homebrew.darwinModules.nix-homebrew
@@ -117,7 +117,7 @@
             # Apple Silicon Only
             enableRosetta = true;
             # User owning the Homebrew prefix
-            user = "elliott";
+            user = "bruce";
 
             autoMigrate = true;
           };
