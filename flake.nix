@@ -23,6 +23,8 @@
           pkgs.neovim
           # pkgs.obsidian
           pkgs.tmux
+          # not sure if this will work
+          pkgs.zed-editor
         ];
 
       homebrew = {
