@@ -73,6 +73,7 @@
         dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
           "/Applications/Safari.app"
+          "${pkgs.zed-editor}/Applications/Zed.app"
           # "${pkgs.obsidian}/Applications/Obsidian.app"
           "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
