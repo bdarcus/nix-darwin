@@ -22,7 +22,9 @@
           pkgs.mkalias
           pkgs.neovim
           # pkgs.obsidian
+          pkgs.pandoc
           pkgs.tmux
+          pkgs.typst
           # not sure if this will work
           pkgs.zed-editor
         ];
