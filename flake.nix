@@ -27,6 +27,7 @@
           pkgs.typst
           # not sure if this will work
           pkgs.zed-editor
+          pkgs.zotero_7
         ];
 
       homebrew = {
@@ -74,6 +75,7 @@
         dock.autohide  = true;
         dock.persistent-apps = [
           "${pkgs.alacritty}/Applications/Alacritty.app"
+          "${pkgs.zotero_7}/Applications/Zotero.app"
           "/Applications/Safari.app"
           "${pkgs.zed-editor}/Applications/Zed.app"
           # "${pkgs.obsidian}/Applications/Obsidian.app"
