@@ -18,7 +18,8 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [
-          pkgs.alacritty
+          pkgs.ghostty
+          pkgs.helix
           pkgs.mkalias
           pkgs.neovim
           # pkgs.obsidian
